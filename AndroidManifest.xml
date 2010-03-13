@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.webs.samirapplications.clockwidget2" android:versionCode="3" android:versionName="1.1.1">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".Info" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.INFO" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".Widget" android:label="Analog Clock Widget 2">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+        </receiver>
+	</application>
+    <uses-sdk android:minSdkVersion="3" />
+</manifest> 
